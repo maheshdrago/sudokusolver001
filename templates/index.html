@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <style>
+    #v{
+      border:solid 1px orange;
+      border-radius: 3px;
+      width:32px;
+      height:30px;
+      text-align:center;
+      margin-top: 0.1px;
+      margin-left: 0.1px;
+    }
+    h1{
+      text-align: center;
+    }
+    #v:hover{
+      border-color: white;
+    }
+    body{
+      background-color: orange;
+    }
+
+    #solve{
+      border:solid 1px orange;
+      border-radius: 6px;
+      padding:12px;
+    }
+    #solve:hover{
+      cursor: pointer;
+      background-color: white;
+    }
+    p{
+      color:white;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>SUDOKU</h1>
+      </div>
+    </div>
+  <center style="margin-top:5%;">
+    <div class="container">
+    <form  method="POST">
+      {%set cnt=[0] %}
+      {%for i in range(9)%}
+      {%for j in range(9)%}
+      {% if cnt.append(cnt.pop() + 1) %}{% endif %}
+      <input id='v' type="text" name="{{cnt[0]}}" value="0">
+      {%endfor%}
+      <br>
+      {%endfor%}<br><br>
+      <p>NOTE : Fill out the empty spaces with ZERO</p><br><br>
+      <input id="solve" type="submit" name="" value="Solve"><br><br>
+
+    </form>
+  </div>
+
+  </center>
+
+
+
+
+
+  </body>
+</html>
