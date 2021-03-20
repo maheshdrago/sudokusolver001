@@ -4,7 +4,7 @@ certifi==2019.3.9
 Flask==1.0.2
 Flask-WTF==0.14.2
 gunicorn==19.9.0
-Jinja2==2.10
+Jinja2==2.11.3
 requests==2.22.0
 requests-oauthlib==0.8.0
 Werkzeug==0.14.1
